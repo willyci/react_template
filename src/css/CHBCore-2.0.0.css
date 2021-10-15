@@ -1,0 +1,879 @@
+/* Cascading Style Sheet for Children's Hospital of Boston */
+/* this css file include all basic components */
+/* body, header, footer, svg icon color, button, typography */
+/* more will add later */
+/* any other localized css should add to it's own custom.css, load afther this file */
+/*  */
+
+/*  import google font 'open sans' */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+/*  */
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  font-family: "Open Sans", Arial, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap")
+    format("truetype");
+  margin: 0px;
+  position: relative;
+}
+
+/* this section is for footer, it will force footer in correct position */
+body::after {
+  content: "";
+  display: block;
+  height: 200px; /* Set same as footer's height */
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* header css */
+header {
+  background: #003087;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+  min-width: 360px;
+}
+
+.header__title {
+  width: 90%;
+  max-height: 50px;
+  min-height: 36px;
+  background-color: #003087;
+  color: #ffffff;
+  font-weight: bold;
+  padding-top: 14px;
+  padding-left: 30px;
+}
+
+/* menu css */
+.header__menuBar {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  border-bottom: 5px solid #cce3ea;
+}
+.header__menuItem {
+  height: 20px;
+  min-width: 140px;
+  max-width: 230px;
+  padding: 15px 30px;
+  color: #003087;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header__menuItem:hover {
+  background-color: #eaf7fc;
+}
+
+.header__menuItem:active {
+  background-color: #9fdaf2;
+}
+
+.header__menuItem_active {
+  color: #c14991;
+  font-weight: bold;
+  border-bottom: 5px solid #c14991;
+}
+
+.header__menuItem_active:hover {
+  font-weight: bold;
+  background-color: #ffffff;
+  cursor: default;
+}
+/* end menu css */
+
+/* patient info section */
+.header__patInfo {
+  min-height: 122px;
+  background: transparent
+    linear-gradient(90deg, #d5ebf2 0%, #f9fafa 48%, #ddedea 100%) 0% 0%
+    no-repeat padding-box;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.patInfo__item .patInfo__item__label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* first one will be name, making font size 18px*/
+.patInfo__item:first-child .patInfo__item__label {
+  text-transform: uppercase;
+}
+
+/* left colunm take 30% width */
+.patInfo__item:nth-child(odd) {
+  padding-bottom: 3px;
+  width: 25%;
+}
+
+/* right column take 65% width */
+.patInfo__item:nth-child(even) {
+  padding-bottom: 3px;
+  width: 70%;
+  margin-left: 20px;
+}
+/* patient info section */
+
+/* place holder css */
+article {
+  padding: 30px;
+}
+/* place holder css */
+
+/*--------------------------------------------------------------------------------*/
+
+/* footer css */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+footer img {
+  width: 288px;
+  /* height: 52px; */
+  padding-top: 30px;
+}
+
+footer div:nth-child(2) {
+  height: 48px;
+  padding-top: 15px;
+  color: #333333;
+  font-size: 16px;
+}
+
+footer div:nth-child(3) {
+  color: #333333;
+  font-size: 12px;
+}
+/* footer css */
+
+/*--------------------------------------------------------------------------------*/
+/* Use css to change the color of the SVG image icon file, */
+/* without edit the SVG file. I have 36 pre-set color you can pick from.  */
+/* HTML code example */
+/* <img class="icon--boston-gray-4" style="width:50px;height:50px;" src="/icons/icn__calendar.svg" /> */
+
+/* svg icon colors */
+.icon--boston-blue {
+  filter: invert(11%) sepia(67%) saturate(5770%) hue-rotate(217deg)
+    brightness(80%) contrast(101%);
+}
+.icon--boston-ocean {
+  filter: invert(31%) sepia(97%) saturate(979%) hue-rotate(170deg)
+    brightness(99%) contrast(101%);
+}
+.icon--boston-gray {
+  filter: invert(46%) sepia(4%) saturate(426%) hue-rotate(185deg)
+    brightness(98%) contrast(94%);
+}
+.icon--boston-gray-4 {
+  filter: invert(100%) sepia(17%) saturate(1309%) hue-rotate(175deg)
+    brightness(103%) contrast(96%);
+}
+.icon--boston-gray-10 {
+  filter: invert(88%) sepia(1%) saturate(109%) hue-rotate(202deg)
+    brightness(112%) contrast(92%);
+}
+.icon--boston-gray-20 {
+  filter: invert(95%) sepia(3%) saturate(46%) hue-rotate(202deg)
+    brightness(100%) contrast(85%);
+}
+.icon--boston-gray-30 {
+  filter: invert(85%) sepia(6%) saturate(56%) hue-rotate(202deg)
+    brightness(104%) contrast(86%);
+}
+.icon--boston-gray-40 {
+  filter: invert(91%) sepia(6%) saturate(69%) hue-rotate(182deg) brightness(90%)
+    contrast(85%);
+}
+.icon--boston-gray-50 {
+  filter: invert(95%) sepia(5%) saturate(98%) hue-rotate(182deg) brightness(80%)
+    contrast(85%);
+}
+.icon--boston-gray-60 {
+  filter: invert(80%) sepia(4%) saturate(162%) hue-rotate(187deg)
+    brightness(87%) contrast(87%);
+}
+.icon--boston-gray-70 {
+  filter: invert(68%) sepia(6%) saturate(151%) hue-rotate(191deg)
+    brightness(92%) contrast(91%);
+}
+.icon--boston-gray-80 {
+  filter: invert(62%) sepia(6%) saturate(179%) hue-rotate(182deg)
+    brightness(92%) contrast(88%);
+}
+.icon--boston-gray-90 {
+  filter: invert(55%) sepia(5%) saturate(265%) hue-rotate(182deg)
+    brightness(93%) contrast(85%);
+}
+.icon--boston-pink {
+  filter: invert(44%) sepia(34%) saturate(2676%) hue-rotate(296deg)
+    brightness(81%) contrast(82%);
+}
+.icon--boston-pink-30 {
+  filter: invert(83%) sepia(27%) saturate(203%) hue-rotate(274deg)
+    brightness(98%) contrast(88%);
+}
+.icon--boston-pink-40 {
+  filter: invert(75%) sepia(30%) saturate(238%) hue-rotate(271deg)
+    brightness(97%) contrast(98%);
+}
+.icon--boston-pink-50 {
+  filter: invert(73%) sepia(42%) saturate(255%) hue-rotate(274deg)
+    brightness(90%) contrast(96%);
+}
+.icon--boston-sky {
+  filter: invert(63%) sepia(32%) saturate(925%) hue-rotate(155deg)
+    brightness(96%) contrast(87%);
+}
+.icon--boston-sky-20 {
+  filter: invert(85%) sepia(19%) saturate(206%) hue-rotate(161deg)
+    brightness(107%) contrast(96%);
+}
+.icon--boston-sky-30 {
+  filter: invert(89%) sepia(8%) saturate(1276%) hue-rotate(173deg)
+    brightness(102%) contrast(95%);
+}
+.icon--boston-sky-40 {
+  filter: invert(85%) sepia(22%) saturate(369%) hue-rotate(156deg)
+    brightness(98%) contrast(95%);
+}
+.icon--boston-sky-50 {
+  filter: invert(77%) sepia(34%) saturate(327%) hue-rotate(155deg)
+    brightness(103%) contrast(90%);
+}
+.icon--boston-bay {
+  filter: invert(44%) sepia(34%) saturate(418%) hue-rotate(187deg)
+    brightness(95%) contrast(86%);
+}
+.icon--boston-green {
+  filter: invert(38%) sepia(99%) saturate(1157%) hue-rotate(49deg)
+    brightness(85%) contrast(101%);
+}
+.icon--boston-yellow {
+  filter: invert(74%) sepia(41%) saturate(5014%) hue-rotate(7deg)
+    brightness(102%) contrast(102%);
+}
+.icon--boston-yellow-20 {
+  filter: invert(87%) sepia(16%) saturate(497%) hue-rotate(343deg)
+    brightness(108%) contrast(98%);
+}
+.icon--boston-yellow-30 {
+  filter: invert(94%) sepia(93%) saturate(477%) hue-rotate(312deg)
+    brightness(103%) contrast(97%);
+}
+.icon--boston-yellow-40 {
+  filter: invert(81%) sepia(53%) saturate(255%) hue-rotate(356deg)
+    brightness(99%) contrast(98%);
+}
+.icon--boston-yellow-50 {
+  filter: invert(76%) sepia(46%) saturate(374%) hue-rotate(358deg)
+    brightness(104%) contrast(95%);
+}
+.icon--boston-indigo {
+  filter: invert(19%) sepia(99%) saturate(2510%) hue-rotate(177deg)
+    brightness(98%) contrast(101%);
+}
+.icon--black {
+  filter: invert(18%) sepia(8%) saturate(0%) hue-rotate(240deg) brightness(94%)
+    contrast(91%);
+}
+.icon--black-70 {
+  filter: invert(45%) sepia(0%) saturate(39%) hue-rotate(142deg) brightness(91%)
+    contrast(69%);
+}
+.icon--black-80 {
+  filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(100%)
+    contrast(87%);
+}
+.icon--black-90 {
+  filter: invert(28%) sepia(17%) saturate(0%) hue-rotate(193deg) brightness(93%)
+    contrast(96%);
+}
+
+.icon--white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(80deg)
+    brightness(102%) contrast(108%);
+}
+.icon--red-alert {
+  filter: invert(15%) sepia(62%) saturate(5721%) hue-rotate(359deg)
+    brightness(89%) contrast(125%);
+}
+/* svg icon colors */
+
+/*--------------------------------------------------------------------------------*/
+
+/* element button */
+.button {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border-radius: 3px;
+  border-style: none;
+  padding: 13px 40px 13px 40px;
+
+  margin-right: 24px;
+  /*n-width: 220px;*/
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* button  state*/
+.button:hover {
+  padding: 11px 38px 11px 38px;
+  border: 2px solid #41b6e6;
+}
+
+.button:focus {
+  padding: 9px 36px 9px 36px;
+  border: 4px solid #41b6e6;
+  outline-color: #41b6e6;
+}
+
+.button:active {
+  background: #41b6e6;
+  border: none;
+  padding: 13px 40px 13px 40px;
+  outline-color: #41b6e6;
+}
+
+.button:disabled,
+button[disabled="disabled"] {
+  border: none;
+  background-color: #f0f0f1;
+  color: #474747;
+  padding: 12px 40px 12px 40px;
+}
+
+/* button modifier */
+.button--primary {
+  background: #003087;
+}
+
+.button--secondary {
+  background-color: #68759c;
+}
+
+.button--tertiary {
+  background-color: #ffffff;
+  padding: 12px 32px;
+  color: #003087;
+  border: 1px solid #d1d5e1;
+}
+
+.button--tertiary:hover {
+  padding: 11px 31px;
+  border: 2px solid #41b6e6;
+}
+
+.button--tertiary:focus {
+  padding: 9px 29px;
+  border: 4px solid #41b6e6;
+}
+
+.button--tertiary:active {
+  color: #ffffff;
+  padding: 9px 29px;
+}
+
+.button--special {
+  background-color: #c14991;
+}
+
+/* element button */
+
+/*--------------------------------------------------------------------------------*/
+
+/* typography */
+label {
+  font-weight: normal;
+  color: #003087;
+  font-size: 36px;
+}
+
+p {
+  font-size: 16px;
+  color: #333333;
+  text-align: left;
+  line-height: 150%;
+  margin-bottom: -10px;
+  margin-top: 24px;
+}
+
+a {
+  font-size: 16px;
+  color: #007dba;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #003087;
+}
+
+a:active {
+  color: #c14991;
+}
+
+a:visited {
+  color: #74767b;
+}
+
+h1 {
+  color: #003087;
+  font-size: 36px;
+  text-align: left;
+  line-height: 120%;
+  font-weight: normal;
+}
+
+h2 {
+  color: #003087;
+  font-size: 24px;
+  text-align: left;
+  line-height: 120%;
+  font-weight: normal;
+}
+
+h3 {
+  color: #c14991;
+  font-size: 20px;
+  text-align: left;
+  line-height: 120%;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  text-align: left;
+  line-height: 150%;
+}
+.small-text {
+  font-size: 12px;
+  color: #333333;
+  text-align: left;
+  line-height: 150%;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #e30000;
+  text-align: left;
+  line-height: 150%;
+}
+
+.error-message--extra {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* typography */
+
+/*--------------------------------------------------------------------------------*/
+
+/* all colors aproved by marketing */
+
+.color--boston-blue {
+  color: #003087;
+}
+
+.color--boston-ocean {
+  color: #007dba;
+}
+
+.color--boston-gray {
+  color: #74767b;
+}
+
+.color--boston-gray-4 {
+  color: #f9fafa;
+}
+
+.color--boston-gray-10 {
+  color: #f0f0f1;
+}
+
+.color--boston-gray-20 {
+  color: #e3e3e4;
+}
+
+.color--boston-gray-30 {
+  color: #d5d5d7;
+}
+
+.color--boston-gray-40 {
+  color: #c7c8ca;
+}
+
+.color--boston-gray-50 {
+  color: #b9babc;
+}
+
+.color--boston-gray-60 {
+  color: #abacaf;
+}
+
+.color--boston-gray-70 {
+  color: #9d9ea2;
+}
+
+.color--boston-gray-80 {
+  color: #8f9195;
+}
+
+.color--boston-gray-90 {
+  color: #818387;
+}
+
+.color--boston-pink {
+  color: #c14991;
+}
+
+.color--boston-pink-30 {
+  color: #ecc8de;
+}
+
+.color--boston-pink-40 {
+  color: #e6b6d3;
+}
+
+.color--boston-pink-50 {
+  color: #e0a3c8;
+}
+
+.color--boston-sky {
+  color: #41b6e6;
+}
+
+.color--boston-sky-20 {
+  color: #d9f0fa;
+}
+
+.color--boston-sky-30 {
+  color: #c5e9f8;
+}
+
+.color--boston-sky-40 {
+  color: #b3e2f5;
+}
+
+.color--boston-sky-50 {
+  color: #9fdaf2;
+}
+
+.color--boston-bay {
+  color: #68759c;
+}
+
+.color--boston-green {
+  color: #628000;
+}
+
+.color--boston-yellow {
+  color: #f2a900;
+}
+
+.color--boston-yellow-20 {
+  color: #fdeecc;
+}
+
+.color--boston-yellow-30 {
+  color: #fbe5b2;
+}
+
+.color--boston-yellow-40 {
+  color: #fadc99;
+}
+
+.color--boston-yellow-50 {
+  color: #f8d47f;
+}
+
+.color--boston-indigo {
+  color: #007396;
+}
+
+.color--black {
+  color: #333333;
+}
+
+.color--black-70 {
+  color: #6f6f6f;
+}
+
+.color--black-80 {
+  color: #5b5b5b;
+}
+
+.color--black-90 {
+  color: #474747;
+}
+
+.color--white {
+  color: #ffffff;
+  border: 1px solid black;
+}
+
+.color--red-alert {
+  color: #e30000;
+}
+
+/* all colors */
+
+/*--------------------------------------------------------------------------------*/
+/* radio buttons */
+
+.inputbox__required {
+  font-size: 16px;
+  color: red;
+  display: contents;
+}
+
+.radio__item {
+  min-width: 100px;
+  margin-top: 10px;
+}
+.container--horizontal {
+  display: flex;
+  gap: 30px;
+}
+
+.container--vertical {
+  display: block;
+  gap: 30px;
+}
+
+.radio__title {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.radio__title--disabled > .inputbox__required {
+  color: #abacaf;
+}
+
+.radio__title--error {
+  color: #e30000;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.radio__label {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.radio__label--error {
+  color: #e30000;
+}
+
+.radio__button {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio__button + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2374767B' stroke-width='1' fill='white'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:checked + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2374767B' stroke-width='1' fill='white'/><circle cx='12' cy='12' r='5' stroke='%2374767B' stroke-width='0' fill='%2374767B'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:hover + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='1' fill='white'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:hover:checked + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='1' fill='white'/><circle cx='12' cy='12' r='5' stroke='%2300B5FF' stroke-width='0' fill='%2300B5FF'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+/* .radio__button:focus:hover + .radio__label::before { */
+.radio__button:focus + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='2' fill='white'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+/* .radio__button:focus:checked:hover + .radio__label::before { */
+.radio__button:focus:checked + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='2' fill='white'/><circle cx='12' cy='12' r='5' stroke='%2300B5FF' stroke-width='0' fill='%2300B5FF'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:active:not([disabled]) + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='1' fill='white'/></svg>");
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:active:checked:not([disabled]) + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%2300B5FF' stroke-width='1' fill='white'/><circle cx='12' cy='12' r='5' stroke='%2300B5FF' stroke-width='0' fill='%2300B5FF'/></svg>");
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__title--disabled {
+  color: #abacaf;
+}
+
+.radio__label--disabled {
+  color: #abacaf;
+}
+
+.radio__button:disabled + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%23757575' stroke-width='1' fill='white'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+.radio__button:disabled:checked + .radio__label::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='12' cy='12' r='8' stroke='%23757575' stroke-width='1' fill='white'/><circle cx='12' cy='12' r='5' stroke='%2300B5FF' stroke-width='0' fill='%23757575'/></svg>");
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  max-height: 12px;
+}
+
+/*--------------------*/
+
+.radio__button--error {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio__button--error + .radio__label::before {
+  content: "";
+  background: #ffffff;
+  border-radius: 100%;
+  border: 1px solid #e30000;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  margin-right: 8px;
+  vertical-align: top;
+  /*cursor: pointer;*/
+  text-align: center;
+}
+
+.radio__button--error:checked + .radio__label::before {
+  background: #e30000 0% 0% no-repeat padding-box;
+  box-shadow: inset 0 0 0 3px #ffffff;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  margin-right: 8px;
+}
+
+.radio__button--error:hover + .radio__label::before {
+  box-shadow: inset 0 0 0 3px #ffffff;
+  border: 1px solid #e30000;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  margin-right: 8px;
+}
+
+.radio__button--error:hover:checked + .radio__label::before {
+  background: #e30000 0% 0% no-repeat padding-box;
+  border: 1px solid #e30000;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  margin-right: 8px;
+}
+
+.radio__button--error:focus + .radio__label::before {
+  background: #e30000 0% 0% no-repeat padding-box;
+  border: 2px solid #e30000;
+  width: 14px;
+  height: 14px;
+  top: 2px;
+  margin-right: 8px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
